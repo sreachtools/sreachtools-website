@@ -15,7 +15,7 @@ reachability/safety specification with at least a desired likelihood
 under soft/hard control bounds. 
 
 <div class="desc-figure">
-    <img src="/assets/stochTubeCartoon.png"
+    <img src="https://sreachtools.github.io/assets/stochTubeCartoon.png"
     alt="Illustration of stochastic reachability of a target tube problem"/>
     <b>SReachTools can design controllers that maximize the probability of
     staying within the target tube, and characterize the set of initial states
@@ -28,7 +28,7 @@ under soft/hard control bounds.
 SReachTools exploits convex optimization, Fourier transforms, and computational
 geometry to obtain *scalable* results. 
 <div class="desc-figure">
-    <img src="/assets/scalability.png" alt="Illustration
+    <img src="https://sreachtools.github.io/assets/scalability.png" alt="Illustration
     of the scalability of SReachTools"/>
     <b>Scalability of SReachTools for verification of a chain of
     integrators.</b>
@@ -54,10 +54,11 @@ our [License](license/).  Please cite our
 if it helps you in your research. 
 - IEEE citation style
 
-  A. P. Vinod, J. D. Gleason, and M. M. K. Oishi. "SReachTools: A MATLAB
-  Stochastic Reachability Toolbox", In _Proceedings of the  International
-  Conference on Hybrid Systems: Computation and Control_, Montreal, Canada,
-  April 16--18, 2019. https://sreachtools.github.io.
+    Abraham P. Vinod, Joseph D. Gleason, and Meeko M. K. Oishi. 2019.
+    SReachTools: a MATLAB stochastic reachability toolbox. In Proceedings of the
+    International Conference on Hybrid Systems: Computation and Control
+    (HSCC '19), Montreal, Canada, 33-38. Available online:
+    https://sreachtools.github.io.
 
 - BibTeX entry for use in LaTeX with `\usepackage{url}`: 
 ```
