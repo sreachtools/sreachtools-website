@@ -93,7 +93,7 @@ We choose MATLAB 2017b and the follow the installation instructions given in
     #
     ## OPTION 2: Fetch nightly
     #
-    curl -sL https://github.com/unm-hscl/SReachTools/archive/master.zip --output SReachTools.zip
+    curl -sL https://github.com/sreachtools/SReachTools/archive/master.zip --output SReachTools.zip
     echo 'Downloaded SReachTools (nightly)'
     unzip -qq SReachTools.zip
     mv SReachTools-master SReachTools

@@ -6,7 +6,7 @@ categories: jekyll update
 author: "Abraham P. Vinod  & Joseph D. Gleason"
 ---
 
-SReachTools Toolbox [v1](https://github.com/unm-hscl/SReachTools/tree/v1.0.0) is
+SReachTools Toolbox [v1](https://github.com/sreachtools/SReachTools/tree/v1.0.0) is
 now out! 
 
 {% include important-note.html content="This is the first stable release of the
@@ -32,21 +32,21 @@ We have submitted a tool paper describing the features of SReachTools to the
 *22nd ACM International Conference on Hybrid Systems: Computation and Control
 summarizing the features of SReachTools*. A copy of this submission is
 [available in the
-repository](https://github.com/unm-hscl/SReachTools/raw/master/SReachTools.pdf).
+repository](https://github.com/sreachtools/SReachTools/raw/master/SReachTools.pdf).
 
 See the quick-start guide below for installation instructions.
 
 ## Important notes on this release
 
 - Updated License to GNU GPLv3, or (at your option) a later version.
-  See [LICENSE](https://unm-hscl.github.io/SReachTools/license/).
+  See [LICENSE](/license).
 - A complete overhaul of the APIs. For more details, see our [submitted tool
-  paper](https://github.com/unm-hscl/SReachTools/raw/master/SReachTools.pdf).
+  paper](https://github.com/sreachtools/SReachTools/raw/master/SReachTools.pdf).
 - All promises made in our previous [blog post](./2018-05-31-release-of-v0x2.md)
   have been met:
     - Extension to LTV systems
     - Support for chance-constrained and particle filter-based verification
-    - Added online API documentation. See [online documentation](https://unm-hscl.github.io/SReachTools/docs/index.html).
+    - Added online API documentation. See [online documentation](/docs/index.html).
 - Affine control synthesis technique based on chance constraints and difference
   of convex programs have been added. See our [submitted
   paper (arXiv)](https://hscl.unm.edu/affinecontrollersynthesis/) for more
@@ -80,7 +80,7 @@ This will disable some of the features of SReachTools or hamper performance.
 
 1. Install the necessary dependencies listed above
 1. Clone the SReachTools repository (or download the latest zip file from
-   [Releases](https://github.com/unm-hscl/SReachTools/releases))
+   [Releases](https://github.com/sreachtools/SReachTools/releases))
 1. Change the MATLAB current working directory to where SReachTools was
    downloaded
 1. Run `srtinit` in MATLAB to add the toolbox to the paths and ensure all

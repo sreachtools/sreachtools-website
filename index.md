@@ -37,29 +37,26 @@ See [this page](long_description) for a detailed description of SReachTools.
 
 ## Can you show me some examples of SReachTools working? 
 
-See the [examples page](https://unm-hscl.github.io/SReachTools/examples/). They
+See the [examples page](/examples). They
 are also available in SReachTools code base, see the `examples/` folder. 
 
 ## How do I install this toolbox? What are the dependencies?
 
-See the [installation page](installation). 
-<!--Where do I get the source code from?-->
-<!--See our [Github repository](https://github.com/unm-hscl/SReachTools), or our-->
-<!--[release page](https://github.com/unm-hscl/SReachTools/releases) for zip files. -->
+See the [installation page](/installation). 
 
 ## How can I use this toolbox?
 
 SReachTools is licensed under [GNU General Public License
 v3](https://www.gnu.org/licenses/), or (at your option) any later version.  See
 our [License](license/).  Please cite our
-[toolpaper](https://github.com/unm-hscl/SReachTools/raw/master/SReachTools.pdf),
+[toolpaper](https://github.com/sreachtools/SReachTools/raw/master/SReachTools.pdf),
 if it helps you in your research. 
 - IEEE citation style
 
   A. P. Vinod, J. D. Gleason, and M. M. K. Oishi. "SReachTools: A MATLAB
   Stochastic Reachability Toolbox", In _Proceedings of the  International
   Conference on Hybrid Systems: Computation and Control_, Montreal, Canada,
-  April 16--18, 2019. https://unm-hscl.github.io/SReachTools/ (accepted).
+  April 16--18, 2019. https://sreachtools.github.io (accepted).
 
 - BibTeX entry for use in LaTeX with `\usepackage{url}`: 
 ```
@@ -70,15 +67,15 @@ if it helps you in your research.
     year      = {2019},
     address   = {Montreal, Canada},
     month     = {April 16--18},
-    note      = {\url{https://unm-hscl.github.io/SReachTools/} (accepted)}
+    note      = {\url{https://sreachtools.github.io} (accepted)}
 }
 ```
 
 ## Where do I ask questions or give feedback? 
 
 For better documentation, use our [Github issues
-page](https://github.com/unm-hscl/SReachTools/issues).  Alternatively, see our
-[Google groups page](https://groups.google.com/d/forum/sreachtools).
+page](https://github.com/sreachtools/SReachTools/issues).  Alternatively, see
+our [Google groups page](https://groups.google.com/d/forum/sreachtools).
 
 
 ## Can I contribute to this toolbox?
@@ -96,8 +93,8 @@ leverages several existing toolboxes and third-party codes:
 2. [CVX](http://cvxr.com/cvx/) developed by Michael Grant and Stephen Boyd.
 3. [GeoCalcLib](http://worc4021.github.io/GeoCalcLib/) developed by Rainer
    Schaich.
-4. [An algorithm for numerical computation of multivariate normal distribution values](http://www.math.wsu.edu/faculty/genz/software/matlab/qscmvnv.m) developed by Alan Genz (Distributed with SReachTools under the [license](https://unm-hscl.github.io/SReachTools/docs/src/helperFunctions/qscmvnv/)).
+4. [An algorithm for numerical computation of multivariate normal distribution values](http://www.math.wsu.edu/faculty/genz/software/matlab/qscmvnv.m) developed by Alan Genz (Distributed with SReachTools under the [license](docs/src/helperFunctions/qscmvnv/).
 5. [allcomb.m](https://www.mathworks.com/matlabcentral/fileexchange/10064-allcomb-varargin)
-developed by Jos van der Geest (Distributed with SReachTools under the [license](https://unm-hscl.github.io/SReachTools/docs/src/helperFunctions/allcomb/#license)).
+developed by Jos van der Geest (Distributed with SReachTools under the [license](docs/src/helperFunctions/allcomb/#license)).
 
 When available, we also use commercial toolboxes from MATLAB and Gurobi.

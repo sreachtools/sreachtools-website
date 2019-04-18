@@ -12,7 +12,7 @@ and LTV systems:
    (prediction of the stochasticity of the state in future) 
 
 Please feel free to add requests for more examples at
-[https://github.com/unm-hscl/SReachTools/issues](https://github.com/unm-hscl/SReachTools/issues).
+[https://github.com/sreachtools/SReachTools/issues](https://github.com/sreachtools/SReachTools/issues).
 The code for `XYZ.html` is available in `examples/XYZ.m`. These html pages were
 created using MATLAB's publish command (see `examples/publish_examples.m`).
 

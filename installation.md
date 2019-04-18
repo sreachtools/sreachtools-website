@@ -91,7 +91,7 @@ This will disable some of the features of SReachTools or hamper performance.
 
 1. Install the necessary dependencies listed above
 1. Clone the SReachTools repository (or download the latest zip file from
-   [Releases](https://github.com/unm-hscl/SReachTools/releases))
+   [Releases](https://github.com/sreachtools/SReachTools/releases))
 1. Change the MATLAB current working directory to where SReachTools was
    downloaded. 
    {% include important-note.html content="Do not add the SReachTools folder to the path manually." %}

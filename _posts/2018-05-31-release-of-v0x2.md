@@ -6,7 +6,7 @@ categories: jekyll update
 author: "Joseph D. Gleason & Abraham P. Vinod"
 ---
 
-SReachTools Toolbox [v0.2](https://github.com/unm-hscl/SReachTools/tree/v0.2) is now out! The SReachTools toolbox is a set of MATLAB codes to facilitate stochastic reachability computations. The toolbox currently supports reachability computations with several methods:
+SReachTools Toolbox [v0.2](https://github.com/sreachtools/SReachTools/tree/v0.2) is now out! The SReachTools toolbox is a set of MATLAB codes to facilitate stochastic reachability computations. The toolbox currently supports reachability computations with several methods:
 * Dynamic programming computation
 * Fourier transformation approximations
 * Lagrangian (set-based) approximations
@@ -39,7 +39,7 @@ This will disable some of the features of SReachTools.
 
 ### Examples
 
-See our [examples page](https://unm-hscl.github.io/SReachTools/examples/).
+See our [examples page](/examples).
 
 ## What are we working on next?
 
