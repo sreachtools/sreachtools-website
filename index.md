@@ -13,8 +13,9 @@ SReachTools constructs a set of safe initial states that satisfy some
 reachability/safety specification with at least a desired likelihood
 (*verification*). It can also *synthesize* controllers for these specifications
 under soft/hard control bounds. 
+
 <div class="desc-figure">
-    <img src="{{ "/assets/stochTubeCartoon.png" | absolute_url }}"
+    <img src="/assets/stochTubeCartoon.png"
     alt="Illustration of stochastic reachability of a target tube problem"/>
     <b>SReachTools can design controllers that maximize the probability of
     staying within the target tube, and characterize the set of initial states
@@ -27,7 +28,7 @@ under soft/hard control bounds.
 SReachTools exploits convex optimization, Fourier transforms, and computational
 geometry to obtain *scalable* results. 
 <div class="desc-figure">
-    <img src="{{ "/assets/scalability.png" | absolute_url }}" alt="Illustration
+    <img src="/assets/scalability.png" alt="Illustration
     of the scalability of SReachTools"/>
     <b>Scalability of SReachTools for verification of a chain of
     integrators.</b>
@@ -56,7 +57,7 @@ if it helps you in your research.
   A. P. Vinod, J. D. Gleason, and M. M. K. Oishi. "SReachTools: A MATLAB
   Stochastic Reachability Toolbox", In _Proceedings of the  International
   Conference on Hybrid Systems: Computation and Control_, Montreal, Canada,
-  April 16--18, 2019. https://sreachtools.github.io (accepted).
+  April 16--18, 2019. https://sreachtools.github.io.
 
 - BibTeX entry for use in LaTeX with `\usepackage{url}`: 
 ```
@@ -67,9 +68,11 @@ if it helps you in your research.
     year      = {2019},
     address   = {Montreal, Canada},
     month     = {April 16--18},
-    note      = {\url{https://sreachtools.github.io} (accepted)}
+    pages     = { 33 -- 38},
+    note      = {\url{https://sreachtools.github.io}}
 }
 ```
+The paper is available online in the [ACM Digital Library](https://dl.acm.org/citation.cfm?id=3311809).
 
 ## Where do I ask questions or give feedback? 
 
