@@ -30,8 +30,9 @@ geometry to obtain *scalable* results, without relying on *any* abstractions.
 <div class="desc-figure">
     <img src="https://sreachtools.github.io/assets/scalability.png" alt="Illustration
     of the scalability of SReachTools"/>
-    <b>Scalability of SReachTools for verification of a chain of
-    integrators.</b>
+    <b>Scalability of SReachTools for verification of a chain of integrators
+    (Intel Xeon CPU with 3.4GHz clock rate and 32 GB RAM running MATLAB
+    R2017a).</b>
 </div>
 <br>
 See [this page](long_description) for a detailed description of SReachTools.
