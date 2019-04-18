@@ -26,7 +26,7 @@ under soft/hard control bounds.
 </div>
 <br>
 SReachTools exploits convex optimization, Fourier transforms, and computational
-geometry to obtain *scalable* results. 
+geometry to obtain *scalable* results, without relying on *any* abstractions. 
 <div class="desc-figure">
     <img src="https://sreachtools.github.io/assets/scalability.png" alt="Illustration
     of the scalability of SReachTools"/>
