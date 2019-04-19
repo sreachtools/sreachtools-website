@@ -36,14 +36,10 @@ We choose MATLAB 2017b and the follow the installation instructions given in
        [GeoCalcLib](https://github.com/worc4021/GeoCalcLib) installation
 1. Next, copy the following text into `post-install script` section:
     ``` bash
-    #!/usr/bin/env bash
-    
-    # tells script to exit, if any line in the script fails (CodeOcean default)
-    set -e
+    #!/bin/bash
     
     ### Install GMP
-    # Requires packages build-essentials for gcc and make, and package m4 (don't
-    # really know why)
+    # Requires packages build-essentials for gcc and make, and package m4 (don't know why)
     curl -sL https://gmplib.org/download/gmp/gmp-6.1.2.tar.bz2 | tar xj
     echo 'Downloaded GMP'
     cd gmp-6.1.2
@@ -86,21 +82,23 @@ We choose MATLAB 2017b and the follow the installation instructions given in
     # Call srtinit in MATLAB to complete the setup
     ## OPTION 1: Fetch a tagged release
     #
-    # SREACHTOOLS_RELEASE=1.1
-    # curl -sL https://abyvinod.github.io/code/SReachTools-v$SREACHTOOLS_RELEASE.tar.gz | tar xz
-    # echo 'Downloaded SReachTools (stable)'
-    # mv SReachTools-$SReachTools SReachTools
-    #
-    ## OPTION 2: Fetch nightly
-    #
-    curl -sL https://github.com/sreachtools/SReachTools/archive/master.zip --output SReachTools.zip
-    echo 'Downloaded SReachTools (nightly)'
+    SREACHTOOLS_RELEASE=1.2
+    curl -sL https://github.com/unm-hscl/SReachTools/archive/v$SREACHTOOLS_RELEASE.zip --output SReachTools.zip
     unzip -qq SReachTools.zip
-    mv SReachTools-master SReachTools
+    mv SReachTools-$SREACHTOOLS_RELEASE SReachTools
     rm SReachTools.zip
+    echo 'Downloaded SReachTools'
+    #
+    # ## OPTION 2: Fetch bleeding edge
+    #
+    # curl -sL https://github.com/unm-hscl/SReachTools/archive/master.zip --output SReachTools.zip
+    # unzip -qq SReachTools.zip
+    # mv SReachTools-master SReachTools
+    # rm SReachTools.zip
+    # echo 'Downloaded SReachTools'
     
     ### Setup MATLAB env for GeoCalcLib, YALMIP, CVX, MPT3, and SReachTools
-    # Trailing \ implies newline in bash. MATLAB executes the commands in the quotes
+    # Trailing \ implies newline in bash. MATLAB executes the commands in the quotes.
     # Make sure each line ends with ;\ to avoid MATLAB throwing errors
     # Use GPLK instead of LCP to avoid wierd shifting | Don't do mpt_init again
     # 1. Add GeoCalcLib to path
