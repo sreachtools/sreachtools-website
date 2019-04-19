@@ -1,0 +1,7 @@
+Run tests
+Run docs2md
+Run publish_examples
+Copy over the files from docs to the website
+Jekyll serve
+Push the site
+Push the repo
