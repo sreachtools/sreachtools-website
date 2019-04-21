@@ -1,6 +1,6 @@
 <div>
   <h2 id="news" style="display:inline-block;">
-    {{ page.list_title | default: "News" }}
+    {{ page.list_title | default: "Recent posts" }}
   </h2>
   <a href="{{ "/feed.xml" | relative_url }}">
     <img src="{{ "/assets/if_social_style_3_rss_341106.svg" | relative_url }}" style="width: 20px; height:20px; padding-bottom: 7px; padding-left: 10px;"/>
@@ -24,3 +24,8 @@
   </li>
   {%- endfor -%}
 </ul>
+
+<p>
+    See <a class="post-link" href="{{site.url}}/blog/"> our complete list </a>
+    of blog posts.
+</p>
