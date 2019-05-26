@@ -52,6 +52,27 @@ title: SReachSetOptions.m
                                       overapproximation of the inverse of the
                                       standard normal cumulative density
                                       function
+            5. compute_style        - Approach used for obtaining the origin of
+                                      the rays (referred to as anchor)
+                                      'max_safe_init' 
+                                          - Choose the anchor such that the
+                                            corresponding open-loop controller
+                                            provides maximum safety
+                                      'cheby' 
+                                          - Choose the anchor which is the 
+                                            Chebyshev center of the safe set at
+                                            t=0, that also admits an open-loop
+                                            stochastic reach probability, above
+                                            the prescribed probability
+                                            threshold.
+                                      'all' 
+                                          - The underapproximative set is
+                                            computed via the convex hull of the
+                                            union of the polytopes obtained from
+                                            the methods above. This polytope
+                                            will have a maximum of twice the
+                                            number of given direction vectors as
+                                            vertices
   
         'genzps-open' : Genz's algorithm + Patternsearch
             1. set_of_dir_vecs      - [MUST HAVE] Set of direction vectors shot
