@@ -77,6 +77,8 @@ title: SReachPointGpO.m
          certificate of exceeding a lower bound suffices. 
     2. After the optimization, the optimal value is reevaluated using a fresh
        set of particles for generality.
+  * A probabilistic bound on the overapproximation error between the provided
+    estimate and the true estimate may be found using Hoeffding's inequality.
   
   ============================================================================
   

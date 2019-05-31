@@ -42,6 +42,7 @@ title: SReachSetOptions.m
                                       safe set at t=0, it should result in a 2-D 
                                       set
             3. verbose              - Verbosity of the implementation {0,1}
+                                      [Default 0]
                                         0 - No output 
                                         1 - Outputs the direction vector being
                                             analyzed and the method used to
@@ -51,9 +52,10 @@ title: SReachSetOptions.m
             4. pwa_accuracy         - Accuracy of the piecewise affine
                                       overapproximation of the inverse of the
                                       standard normal cumulative density
-                                      function
+                                      function [Default 1e-3]
             5. compute_style        - Approach used for obtaining the origin of
                                       the rays (referred to as anchor)
+                                      [Default 'all']
                                       'max_safe_init' 
                                           - Choose the anchor such that the
                                             corresponding open-loop controller
@@ -65,7 +67,7 @@ title: SReachSetOptions.m
                                             stochastic reach probability, above
                                             the prescribed probability
                                             threshold.
-                                      'all' 
+                                      'all'
                                           - The underapproximative set is
                                             computed via the convex hull of the
                                             union of the polytopes obtained from
@@ -103,6 +105,12 @@ title: SReachSetOptions.m
             6. PSoptions            - MATLAB struct from psoptimset(), options
                                       for MATLAB's patternsearch 
                                       [Default psoptimset('Display', 'off')]
+            7. compute_style_ccc    - Compute style option specification to use
+                                      for the function call
+                                      SReachSet('chance-open') for
+                                      initialization [Default: 'all'] | See
+                                      'compute_style' option in 'chance-open' 
+                                      for more details
   
         'lag-over'/'lag-under' : Lagrangian-based over- and underapproximation
              1. bound_set_method        - Method for obtaining the bounded set
@@ -249,6 +257,13 @@ title: SReachSetOptions.m
   * While 'Gaussian' disturbance can have options.bound_set_method be 'polytope'
     or 'ellipsoid', 'UserDefined' disturbance requires options.bound_set_method
     to be 'polytope'.
+  * In 'genzps-open', desired accuracy is the farthest lower bound on the
+    confidence interval acceptable. In order to remain conservative,
+    RandomVector/getProbPolyhedron subtracts desired_accuracy from the result to
+    yield an underapproximation. For higher desired_accuracy, the result may be
+    more conservative but faster. For lower desired_accuracy, the result may
+    take more time.
+ 
   ============================================================================
   
   This function is part of the Stochastic Reachability Toolbox.

@@ -34,6 +34,7 @@ title: polytopesFromMonteCarloSims.m
   Outputs:
   --------
     set_of_polytopes  - Set of polytopes comprised of the points. (Array)
+    hpoly             - Handle of the MPT3 plot for one of the polytopes
  
   See also generateMonteCarloSims
  

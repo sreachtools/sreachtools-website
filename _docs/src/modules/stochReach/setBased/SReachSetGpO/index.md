@@ -20,8 +20,6 @@ title: SReachSetGpO.m
   computation," IEEE Transactions in Automatic Control, 2018 (submitted)
   https://arxiv.org/pdf/1810.05217.pdf.
  
-  This computation involves an UNJUSTIFIED HEURISTIC. Please see the notes.
- 
   =============================================================================
  
   [polytope, extra_info] = SReachSetGpO(method_str, sys, prob_thresh,...
@@ -79,13 +77,21 @@ title: SReachSetGpO.m
   ------
   * extra_info.xmax_reach_prob is the highest prob_thresh that may be given
     while obtaining a non-trivial underapproximation
-  * See @LtiSystem/getConcatMats for more information about the
-      notation used.
+  * This function calls SReachSet (chance-open) for the purposes of
+    initialization of the nonlinear solver as well as constructing bounds on the
+    line search.
   * We compute the set by ray-shooting algorithm that guarantees an
     underapproximation due to the compactness and convexity of the stochastic
     reach set. 
+    - Xmax computation is done with a heuristic of centering the initial
+      state with respect to the polytope obtained via SReachSet (chance-open),
+      followed by a patternsearch-based xmax computation
     - Line search is done via bisection on theta, the scaling along the
       direction vector of interest. 
+        - The underapproximative polytope returned by SReachSet (chance-open) is
+          utilized to compute a lower bound on theta
+        - The upper bound on the theta is obtained by the support vector of
+          the target tube at t=0.
     - Internal computation is done using SReachPointGpO to maximize code
       modularity and reuse.
     - The bisection is guided by feasibility of finding an open-loop controller
@@ -103,17 +109,25 @@ title: SReachSetGpO.m
         2. After the optimization, the optimal value is reevaluated using a
            fresh set of particles for generality.
         3. At each value of theta, feasibility is determined if the optimal
-           value of the optimization is above prob_thresh. Note that this
-           is an UNJUSTIFIED HEURSITIC, since it is not clear with what
-           probability this will hold. However, by using a sufficiently low
-           desired_accuracy, it can be understood that we will not be too
-           off.
+           value of the optimization is above prob_thresh. However, by using a
+           sufficiently low desired_accuracy in Genz's algorithm, it can be seen
+           that we will not be too off. Moreover, Hoeffding's inequality can be
+           utilized to bound the overapproximation.
       The first two adjustments are implemented in SReachPointGpO, the
       point-based stochastic reachability computation using genzps-open
       method. 
   * Xmax computation is done with a heuristic of centering the initial
     state with respect to the polytope obtained via SReachSet
     (chance-open), followed by a patternsearch-based xmax computation
+  * In 'genzps-open', desired accuracy is the farthest lower bound on the
+    confidence interval acceptable. In order to remain conservative,
+    RandomVector/getProbPolyhedron subtracts desired_accuracy from the result to
+    yield an underapproximation. For higher desired_accuracy, the result may be
+    more conservative but faster. For lower desired_accuracy, the result may
+    take more time.
+  * See @LtiSystem/getConcatMats for more information about the
+      notation used.
+ 
   =============================================================================
   
   This function is part of the Stochastic Reachability Toolbox.
